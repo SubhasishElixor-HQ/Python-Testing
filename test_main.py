@@ -1,5 +1,6 @@
 from main import get_weather
 
+
 def test_get_weather():
     assert get_weather(-5) == "It's freezing! Stay warm."
     assert get_weather(-10) == "It's freezing! Stay warm."
