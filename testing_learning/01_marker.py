@@ -1,6 +1,7 @@
 # custom markers in pytest
 import pytest
 
+
 @pytest.mark.smoke
 def test_login():
     print("This is a test login function.")
