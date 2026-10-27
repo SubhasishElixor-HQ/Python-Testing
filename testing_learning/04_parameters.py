@@ -1,5 +1,5 @@
 import pytest
-import sys
+
 
 @pytest.mark.parametrize(
     "username, password",
@@ -9,6 +9,6 @@ import sys
         ("user3", "automation"),
         ("user4", "testing"),
     ]
-)       
+)
 def test_login(username, password):
     print(f"Testing login functionality for {username} with password {password}...")
