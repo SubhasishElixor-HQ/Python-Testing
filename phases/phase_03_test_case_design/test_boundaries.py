@@ -1,4 +1,5 @@
 import pytest
+
 from practice.math_rules import is_valid_quantity
 
 

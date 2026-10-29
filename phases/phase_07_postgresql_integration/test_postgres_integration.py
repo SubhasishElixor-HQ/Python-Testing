@@ -1,4 +1,5 @@
 import os
+
 import pytest
 
 pytestmark = pytest.mark.integration
@@ -14,7 +15,6 @@ def test_postgres_connection():
     if not database_url:
         pytest.fail("Set TEST_DATABASE_URL to a disposable test database")
 
-    with psycopg.connect(database_url) as connection:
-        with connection.cursor() as cursor:
-            cursor.execute("SELECT 1")
-            assert cursor.fetchone() == (1,)
+    with psycopg.connect(database_url) as connection, connection.cursor() as cursor:
+        cursor.execute("SELECT 1")
+        assert cursor.fetchone() == (1,)

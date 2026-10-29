@@ -1,5 +1,6 @@
 import pytest
-from practice.math_rules import apply_discount, add
+
+from practice.math_rules import add, apply_discount
 
 
 def test_add():
